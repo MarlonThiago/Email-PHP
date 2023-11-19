@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/e-mail.png">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/features.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-faded" style="background-color: rgb(8, 8, 8); border-color: #e6dfdf;">
+    <div class="form">
+      <a class="navbar-brand" href="#">
+        <img src="" >
+         <strong ><font color="white">Mail</font></strong>
+      </a>
+    </div>
+  </nav>
+
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"><font color="white">Home</font></h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="a1">
+      <div >
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+      </div>
+      <div >
+        <!--opção de envio -->
+        <h3 class="fs-2">Enviar</h3>
+        <p>Escolha essa opção caso deseje enviar email.</p>
+        <a href="mail.php" class="btn btn-primary">
+          Enviar
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="a2">
+      <div>
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+      </div>
+      <div >
+        <!--Estatística do site-->
+        <h3 class="fs-2">Estatística</h3>
+        <p>Use essa opção para observar a estatística.</p>
+        <a href="esta.html" class="btn btn-primary">
+          Estatística
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="a3">
+        <div >
+         <svg class="bi" width="1em" height="1em"><use xlink:href=""/></svg>
+         </div>
+         <div >
+           <!--pagina para cadastrar novos emails-->
+           <h3 class="fs-2">Cadastrar </h3>
+            <p>Cadastre novos email para fazer envio.</p>
+          </div> 
+        <a  class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Cadastrar
+        </a>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar um email para envio</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <br>
+                    <div class="modal-body p-5 pt-0">
+                      <form method="POST" action="cad2.php">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control rounded-3"  placeholder="email" name ="eemail">
+                          <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input class="form-control rounded-3"  placeholder="nome" name="nnome">
+                          <label for="floatingInput">Nome</label>
+                        </div>
+                        <button class="btn btn-primary" data-bs-dismiss="modal">Cadastrar</button>
+                        <a class="btn btn-secondary" data-bs-dismiss="modal" >
+                          Cancelar 
+                        </a>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div> 
+ 
+         
+
+
+</body>
+<script src="js/bootstrap.js"></script>
+</html>

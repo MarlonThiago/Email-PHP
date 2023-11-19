@@ -1,0 +1,77 @@
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .75rem;
+}
+
+.navbar{
+  background:black;
+
+}
+.a1 {
+  position: relative;
+  z-index: 1;
+  background: #e7e5e5;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+
+}
+.a3 {
+  position: relative;
+  z-index: 1;
+  background: #e7e5e5;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+
+}
+.a2 {
+  position: relative;
+  z-index: 1;
+  background: #e7e5e5;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+
+}
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+body {
+  background: url('../img/girl_silhouette_milky_way_476122_1920x1200.jpg')no-repeat;
+  background-size: cover;
+}
+
+
+

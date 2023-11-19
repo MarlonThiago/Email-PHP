@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/features.css">
+    <link href="css/script.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/e-mail.png">
+    <title>Mail</title>
+</head>
+<body Class="minha-div">
+
+    <nav class="navbar navbar-light bg-faded" style="background-color: rgb(8, 8, 8); border-color: #e6dfdf;">
+        <div class="form">
+          <a class="navbar-brand" href="menu.php">
+            <img src="" >
+             <strong ><font color="white">Mail</font></strong>
+          </a>
+        </div>
+      </nav>
+      <br><br>
+
+   
+    <center  style="width: 500px;background-color: rgba(239, 245, 242, 0.514); margin:auto; margin-top: 40px; border-radius: 30px;"> 
+      <p style="color: rgb(12, 12, 12);">
+        <?php
+
+        
+        require_once 'conexao.php';
+        
+
+        // Verifica se a conexão foi bem-sucedida
+
+
+        // Recupera os endereços de e-mail do banco de dados
+        
+        
+        $query = "SELECT SUM(contador) AS total, COUNT(DISTINCT email) AS total_emails FROM tnews";
+
+        // Executa a consulta
+        $resultado = $conn->query($query);
+
+        // Obtém os resultados
+        $dados = $resultado->fetch(PDO::FETCH_ASSOC);
+
+        // Exibe o total de contadores e total de e-mails
+        
+        
+                // Dados para conexão com o banco de dados
+         // Consulta para a primeira tabela
+          $query1 = "SELECT * FROM tnews";
+
+          // Consulta para a segunda tabela
+          //$query2 = "SELECT * FROM tabela2";
+       
+          // Executa a consulta para a primeira tabela
+          $resultado1 = $conn->query($query1);
+
+          // Executa a consulta para a segunda tabela
+           //$resultado2 = $conn->query($query2);
+
+        ?>
+        <table style="border-collapse: collapse; width: 100%; max-width: 600px; margin: auto; ">
+          <thead>
+            <tr style="background-color: #333; color: #fff;">
+              <th style="padding: 12px; text-align: left;">E-mails</th>
+              <th style="padding: 12px; text-align: center;">Envios</th>
+            </tr>
+          </thead>
+          <tbody style="color: aliceblue;">
+            <?php while ($linha = $resultado1->fetch(PDO::FETCH_ASSOC)) { ?>
+            <tr style="border-bottom: 1px solid #ddd;">
+              <td style="padding: 12px;"><?php echo $linha['email']; ?></td>
+              <td style="padding: 12px; text-align: center;"><?php echo $linha['contador']; ?></td>
+            </tr>
+            <?php } ;?>
+          </tbody>
+          <tfoot>
+            <tr style="background-color: #333; color: #fff;">
+              <td style="padding: 12px; text-align: right;" colspan="2"><?php echo "Total de e-mails enviados: " . $dados['total_emails']?>
+            </td>
+            </tr>
+          </tfoot>
+        </table>
+        <a href="home.html" style="background-color: #333; color: rgb(26, 25, 25);">
+                <button type="button" class="btn btn-outline-light" >
+                  Home
+                </button>
+         </a>
+      </p>  
+    </center>    
+</body>
+</html>
